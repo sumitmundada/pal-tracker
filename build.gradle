@@ -28,20 +28,24 @@ jar {
     }
 }
 
-sourceSets {
-    main {
-        java {
-            srcDir 'src'
-        }
-    }
-}
+//sourceSets {
+//    main {
+//        java {
+//            srcDir 'src'
+//        }
+//    }
+//}
 repositories {
     mavenCentral()
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-
+    //implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    //implementation 'mysql:mysql-connector-java'
+//    implementation 'org.junit.jupiter:junit-jupiter-api'
+//    implementation 'org.assertj:assertj-core'
+//    implementation 'org.springframework.boot:spring-boot-test'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
@@ -52,10 +56,9 @@ test {
 }
 
 bootRun.environment([
-        "WELCOME_MESSAGE": "hello12345",
+        "WELCOME_MESSAGE": "hello",
 ])
 
 test.environment([
         "WELCOME_MESSAGE": "Hello from test",
 ])
-
